@@ -7,7 +7,7 @@ painted over a blurred patch, aligned to the code's orientation.
 
 ## Install
 
-Requires Python 3.11+ and `ffmpeg` on your PATH.
+Requires Python 3.11+, uv and `ffmpeg` on your PATH.
 
 ```bash
 # macOS
