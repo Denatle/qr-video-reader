@@ -20,10 +20,10 @@ sudo apt install ffmpeg
 Then set up the Python side:
 
 ```bash
-python3 -m venv .venv
+uv venv
 source .venv/bin/activate
 
-pip install opencv-python numpy zxing-cpp qrcode
+uv sync
 ```
 
 Check ffmpeg is visible:
@@ -37,7 +37,15 @@ ffmpeg -version
 Process a video:
 
 ```bash
-python qr_video_processor.py input.mp4
+qr_reader input.mp4
+
+or
+
+uv run qr_reader input.mp4
+
+or
+
+python src/qr_reader/__init__.py input.mp4
 ```
 
 Writes `out.mp4` with the original audio muxed back in.
