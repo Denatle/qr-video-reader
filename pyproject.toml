@@ -1,0 +1,21 @@
+[project]
+name = "qr-reader"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "denatle", email = "iq.labozin@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "opencv-python>=5.0.0.93",
+    "pyzbar>=0.1.9",
+    "zxing-cpp>=3.1.1",
+]
+
+[project.scripts]
+qr-reader = "qr_reader:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
