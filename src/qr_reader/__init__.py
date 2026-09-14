@@ -1,3 +1,4 @@
+import argparse
 import subprocess
 import cv2
 import numpy as np
@@ -120,16 +121,22 @@ def mux_audio(
     subprocess.run(cmd, check=True)
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input", nargs="?", default="silly_qr_test.mp4")
+    parser.add_argument("-o", "--output", default="out.mp4")
+    parser.add_argument("-t", "--temp", default="temp_noaudio.mp4")
+    parser.add_argument("-s", "--start", type=float, default=0)
+    return parser.parse_args()
+
+
 def main() -> None:
-    start = 0
-    input_path = "silly_qr_test.mp4"
-    temp_path = "temp_noaudio.mp4"
-    output_path = "out.mp4"
+    args = parse_args()
 
-    process(input_path, temp_path, start)
-    mux_audio(input_path, temp_path, output_path, start)
+    process(args.input, args.temp, args.start)
+    mux_audio(args.input, args.temp, args.output, args.start)
 
-    print("done -> out.mp4")
+    print(f"done -> {args.output}")
 
 
 if __name__ == "__main__":
