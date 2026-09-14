@@ -3,6 +3,8 @@
 Finds QR codes in a video and replaces each one with its decoded text,
 painted over a blurred patch, aligned to the code's orientation.
 
+<img width="1921" height="1078" alt="Screenshot 2026-09-15 at 00 54 16" src="https://github.com/user-attachments/assets/40dc285d-c18d-4626-bd49-f662d5475f60" />
+
 ## Install
 
 Requires Python 3.11+ and `ffmpeg` on your PATH.
