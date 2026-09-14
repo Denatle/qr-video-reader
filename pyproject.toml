@@ -1,7 +1,7 @@
 [project]
 name = "qr-reader"
 version = "0.1.0"
-description = "Add your description here"
+description = "Decode qr's in video"
 readme = "README.md"
 authors = [
     { name = "denatle", email = "iq.labozin@gmail.com" }
